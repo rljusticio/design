@@ -94,6 +94,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background: url('../img/concrete_seamless.png');
 }
 
 .avatar--container{
@@ -152,7 +153,7 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-
+    margin-bottom: 100px;
     > li {
         margin-bottom: $spacing-unit;
     }
