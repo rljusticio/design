@@ -190,3 +190,18 @@ pre {
         }
     }
 }
+
+.button{
+  width: auto;
+  padding: 10px 15px;
+  border: solid green 1px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 1em;
+  display: inline-block;
+  text-decoration: none;
+  font-family:$head-font-family;
+  &:hover{
+    text-decoration: none;
+  }
+}

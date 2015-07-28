@@ -4,10 +4,28 @@ email: design@design.com
 description:  A blog about design
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-baseurl: '/design'
 twitter_username: jdw_dev
 github_username:  rljusticio
+paginate: 3
 
 # Build settings
 markdown: kramdown
 permalink: /:title
+
+#Default settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: Justin Walters
+      layout: "post"
+      category: design
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
