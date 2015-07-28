@@ -2,7 +2,7 @@
 title: Design
 email: design@design.com
 description:  A blog about design
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/design" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jdw_dev
 github_username:  rljusticio
