@@ -49,7 +49,7 @@ With this property we can give an element a width of 400px, 20px of padding, and
 Most web designers find the border-box setting quite useful, so they create a universal selector style to apply it to every element on a page.
 
     *, *:before, *:after{
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
 Ultimately, border-box is superior to content-box because elements will remain the size you declare. This makes your life as a developer or designer just a bit easier.
