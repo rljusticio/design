@@ -1,0 +1,399 @@
+Chris Coyier
+
+w3 schools
+
+MDN
+
+-for non-replaced inline elements, the amount of space taken up
+(the contribution to the height of the line) is determined by the
+line-height property, even though the border and padding appear visually
+around the content
+
+sitepoint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
+-when the available content space has an unknown width—as in the case of a
+fluid layout—this method can’t be used, as percentages and pixels can’t be
+added together
+
+
+addedbytes
+
+-as you can see, a box is made up of four distinct parts.
+-the margin is outside the second part, which is the border. The border
+outlines the visible portion of the element.
+-inside the border is the third part of the box, the padding, and then
+inside that the content area of the box.
+
+
+-the padding, border and margin must be added to that in order to calculate
+the total space occupied by the box.
+
+learn css layout
+-when you set the width of an element, the element can actually appear
+bigger than what you set: the element's border and padding will stretch
+out the element beyond the specified width.
+
+head first
+
+
+-the content area is surrounded by optional transparent padding
+-an optional border can be placed around the padding
+-an optional transparent margin surrounds everything
+
+-the margin is optional and surrounds the border
+-the margin gives you a way to add space between your element and
+other elements on the same page
+-if two boxes are next to each other, the margins act as the space
+between them.
+-like padding, margins are transparent and have no color or decoration
+of their own
+
+-the margin provides space between your element and other elements,
+while padding gives you extra space around your content.
+
+
+TMM
+
+
+-margin is what separates one tag from another. The space that commonly
+appears between the tops and bottoms of paragraphs of text on a web page,
+for example, is the margin
+-Four properties control margin edges: margin-top, margin-right,
+margin-bottom, and margin-left. Similarly, four properties control
+padding: padding-top, paddingright, padding-bottom, and padding-left.
+
+-you could run into some bizarre math when the bottom margin of one element
+touches the top margin of another. Instead of adding the two margins together,
+a web browser applies the larger of the two margins
+
+
+-height and width properties assign a height and width to the
+content area of a style
+
+-The width and height properties set the width and height of the
+content area of the style
+
+
+
+
+
+
+1
+00:00:00,000 --> 00:00:04,739
+[MUSIC]
+
+2
+00:00:04,739 --> 00:00:07,701
+The box model is the basis of CSS layout
+because it
+
+3
+00:00:07,701 --> 00:00:13,230
+dictates how elements are displayed and
+how they interact with each other.
+
+4
+00:00:13,230 --> 00:00:17,150
+Think of each element on the page as a
+rectangular box.
+
+5
+00:00:17,150 --> 00:00:21,580
+Each box has certain dimensions and takes
+up a certain amount of space.
+
+6
+00:00:21,580 --> 00:00:25,790
+Now, the space the box takes up depends on
+its content, and
+
+7
+00:00:25,790 --> 00:00:30,120
+the padding borders and margins that may
+surround the content.
+
+8
+00:00:30,120 --> 00:00:33,260
+So the box model is what describes the
+amount of space each
+
+9
+00:00:33,260 --> 00:00:34,830
+element takes up on the page.
+
+10
+00:00:34,830 --> 00:00:38,860
+So, let's dig a little deeper into this
+concept by going over the main
+
+11
+00:00:38,860 --> 00:00:41,130
+components that make up the CSS box model.
+
+12
+00:00:42,650 --> 00:00:47,210
+The very basis of designing with CSS is
+understanding the box model concept.
+
+13
+00:00:47,210 --> 00:00:48,730
+So, as I mentioned earlier,
+
+14
+00:00:48,730 --> 00:00:53,520
+we'll need to begin thinking of every HTML
+element on the page as a box.
+
+15
+00:00:53,520 --> 00:00:58,020
+And as you can see here, if we apply a red
+border to every element on our page,
+
+16
+00:00:58,020 --> 00:01:01,590
+each element is made up of a rectangle or
+a box.
+
+17
+00:01:01,590 --> 00:01:05,270
+So, in order to effectively understand the
+CSS box model concept,
+
+18
+00:01:05,270 --> 00:01:08,400
+we need to know the two ways elements are
+naturally displayed.
+
+19
+00:01:09,550 --> 00:01:13,990
+So, every element has a display value,
+depending on what type of element it is.
+
+20
+00:01:13,990 --> 00:01:17,970
+The default for most elements is usually
+block or inline.
+
+21
+00:01:17,970 --> 00:01:21,340
+Now, block elements form a separate block
+that takes up
+
+22
+00:01:21,340 --> 00:01:25,890
+the full width available based on the
+width of its parent element, and
+
+23
+00:01:25,890 --> 00:01:29,870
+it creates a new line before and after the
+element.
+
+24
+00:01:29,870 --> 00:01:37,180
+Some examples of block elements are divs,
+paragraph, any heading tag, or list items.
+
+25
+00:01:37,180 --> 00:01:43,510
+So, notice how the block-level divs on our
+page, as well as the headings and
+
+26
+00:01:43,510 --> 00:01:48,000
+lists are taking up an entire line of
+content.
+
+27
+00:01:48,000 --> 00:01:53,080
+They're also forcing a new line of content
+before and after the element.
+
+28
+00:01:53,080 --> 00:01:55,750
+And we can see that as well down here in
+our footer div.
+
+29
+00:01:57,200 --> 00:02:01,780
+Now, inline elements only take up as much
+width as they need to.
+
+30
+00:02:01,780 --> 00:02:06,330
+They don't force any new lines, and they
+stay inline with the rest of the content.
+
+31
+00:02:06,330 --> 00:02:11,230
+Some examples of inline elements are span
+tags, images, and anchor elements.
+
+32
+00:02:11,230 --> 00:02:13,510
+So, notice how the anchor element, or
+
+33
+00:02:13,510 --> 00:02:18,640
+linked boxes, stay in line with the rest
+of the content in our paragraph.
+
+34
+00:02:18,640 --> 00:02:22,110
+The same thing happens up top in our title
+span element.
+
+35
+00:02:22,110 --> 00:02:26,720
+Notice how its width only takes up the
+space of its content.
+
+36
+00:02:26,720 --> 00:02:31,560
+And the reason it's displayed on its own
+line is because there's a block-level h1
+
+37
+00:02:31,560 --> 00:02:33,130
+element underneath it.
+
+38
+00:02:33,130 --> 00:02:37,200
+The block-level h1 is forcing the new
+line.
+
+39
+00:02:37,200 --> 00:02:39,958
+So now let's discuss how padding, borders,
+and
+
+40
+00:02:39,958 --> 00:02:44,432
+margins interact with each to form a box
+because it's important to understand.
+
+41
+00:02:44,432 --> 00:02:47,449
+[SOUND] The box in the box model is made
+of
+
+42
+00:02:47,449 --> 00:02:51,138
+four distinct parts that calculate its
+size.
+
+43
+00:02:51,138 --> 00:02:53,630
+And visually, it's rather simple as we can
+see here.
+
+44
+00:02:54,730 --> 00:02:59,791
+The innermost area and core component of
+the box is the content area, [SOUND] which
+
+45
+00:02:59,791 --> 00:03:04,718
+is the area containing the element's
+actual content, like text or an image.
+
+46
+00:03:04,718 --> 00:03:08,422
+Surrounding that content area is the
+[SOUND] padding area.
+
+47
+00:03:08,422 --> 00:03:12,255
+Padding is often used to give the content
+area some breathing room by
+
+48
+00:03:12,255 --> 00:03:15,629
+separating the content from the
+surrounding border area.
+
+49
+00:03:15,629 --> 00:03:19,400
+And the border area of [SOUND] the box is
+the outermost part of the box.
+
+50
+00:03:19,400 --> 00:03:22,560
+You can think of it as an outline to the
+box.
+
+51
+00:03:22,560 --> 00:03:26,360
+Although borders are optional, different
+styles like color and
+
+52
+00:03:26,360 --> 00:03:27,972
+thickness can be applied to them.
+
+53
+00:03:27,972 --> 00:03:32,513
+Finally, the [SOUND] margin area exists
+outside of the box.
+
+54
+00:03:32,513 --> 00:03:37,050
+It's this space around an element that
+separates it from other elements.
+
+55
+00:03:37,050 --> 00:03:39,792
+So the most important thing to remember
+here is
+
+56
+00:03:39,792 --> 00:03:42,958
+[SOUND] the padding area creates space
+inside the box,
+
+57
+00:03:42,958 --> 00:03:47,127
+while the margin area [SOUND] creates
+space outside and around the box.
+
+58
+00:03:47,127 --> 00:03:49,682
+So, as we can see, padding, borders, and
+
+59
+00:03:49,682 --> 00:03:53,370
+margins are important components of the
+CSS box model.
+
+60
+00:03:53,370 --> 00:03:56,800
+They are the properties that essentially
+wrap the content area of a box.
+
+61
+00:03:58,030 --> 00:04:01,320
+So, now that we've covered the main
+properties of the box model,
+
+62
+00:04:01,320 --> 00:04:03,420
+we're ready to put these concepts to work.
+
+63
+00:04:03,420 --> 00:04:04,390
+That's coming up next.
