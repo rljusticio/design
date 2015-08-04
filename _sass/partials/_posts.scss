@@ -20,3 +20,66 @@
     text-align: center;
   }
 }
+.demo{
+  width: 80%;
+  border: 1px black solid;
+  margin: 2em auto;
+  padding: 10px;
+  p{
+    margin: 0;
+  }
+  &.relative{
+    position: relative;
+    overflow: visible;
+  }
+}
+.box-red{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  &.offset-relative{
+    position: relative;
+    left: 300px;
+    top: 100px;
+  }
+  &.relative{
+    position: relative;
+  }
+  &.absolute{
+    position: absolute;
+  }
+  &.absolute-offset{
+    position: absolute;
+    left: 60px;
+  }
+}
+.box-green{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  &.relative{
+    position: relative;
+  }
+  &.absolute{
+    position: absolute;
+  }
+}
+.box-blue{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  &.offset-relative{
+    position: relative;
+    left: 150px;
+    bottom: 50px;
+  }
+  &.relative{
+    position: relative;
+  }
+  &.absolute{
+    position: absolute;
+  }
+}
+.zindex{
+  z-index: 1;
+}
