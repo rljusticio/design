@@ -83,3 +83,44 @@
 .zindex{
   z-index: 1;
 }
+.float-demo{
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 2em;
+  p{
+    font-size: .8em;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  .border-float{
+    border: 3px solid #000;
+    background-color: red;
+    &.marg-left{
+      margin-left: 130px;
+      padding: 5px;
+    }
+  }
+  .marg-bot{
+    margin-bottom: 2em;
+  }
+}
+.no-pad{
+  padding: 0;
+}
+.clear-left{
+  clear: left;
+}
+.clear-right{
+  clear: right;
+}
+.clearfix:after {
+ content: ".";
+ visibility: hidden;
+ display: block;
+ height: 0;
+ clear: both;
+}
